@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+      <meta http-equiv="content-type" content="text/ html;charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- jQuery library -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    
+<style>
+    .modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    display: block;
+    opacity: 1;
+}
+.modalDialog > div {
+  width: 400px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 110px;
+    padding: 70px 30px 65px 30px;
+    border-radius: 7px;
+    background: #ffffff;
+}
+.modalDialog h2 {
+    font-size: 26px;
+    font-weight: bold;
+    font-family: OpenSans,sans-serif;
+    margin: 0;
+    border-bottom: 1px solid #e4e4e4;
+}
+.modalDialog p.titlehead {
+   font-family: OpenSans,sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding-top: 30px;
+    line-height: 1.5;
+    width: 90%;
+}
+.close {
+    float: right;
+    margin-top: -58px;
+    margin-right: -48px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 28px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 18px 12px;
+    background: #ff3b30;
+}
+
+.close:before {
+    float: right;
+    content: "\2715";
+    font-size: 18px;
+    color: #fff;
+}
+</style>
+
+
+</head>
+
+<body>
+<div id="openModal" class="modalDialog">
+    <div>   
+          <a href="#" title="close" class="close"></a>
+        	<h2>Free Trial</h2>
+
+        <p class="titlehead">Need more time to decide ? Try our secure
+            site product. <a href="https://www.websecurity.symantec.com/support/contact" target="_blank">Click here to Enroll.</a></p>
+    </div>
+</div>
+
+<script>
+$(document).ready(function() {
+  setTimeout(function() {
+    $("#openModal").show();
+  }, 2000);
+
+$("a.close").click(function(){
+    $("#openModal").css("display","none");
+});
+});
+
+</script>
+</body>
+
+</html>
